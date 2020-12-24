@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="shortcut icon" href="covid1.png">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bungee&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script type="text/javascript" src="script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDn80AL4uaCPAJf5fTNriOuvigLc178sYc&callback=initMap&libraries=&v=weekly" defer></script>
+
+
+    <script>
+        // Initialize and add the map
+        function initMap() {
+            // The location of India
+            const india = { lat: 20.5937, lng: 78.9629 };
+            // The map, centered at India
+            const map = new google.maps.Map(document.getElementById("map"), {
+                zoom: 4.2,
+                center: india,
+            });
+            // The marker, positioned at India.
+            const marker = new google.maps.Marker({
+                // position: newdelhi,
+                map: map,
+            });
+        }
+    </script>
+
+    <title>COVID Tracker</title>
+</head>
+
+<body>
+    <div class="container1">
+        <h1><span><a href="#home"> COVID-19</a></span></h1>
+    </div>
+    <div class="container2 ">
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact us</a>
+            </li>
+        </ul>
+    </div>
+
+    <div style="clear: both;"></div>
+    <marquee behavior="scroll" id="home" bgcolor="#feb47b" direction="left" scrollamount="12">Follow all the guidelines provided by WHO.</marquee>
+    <marquee behavior="alternate" direction="" scrollamount="7">Stay Home Stay Safe</marquee>
+    <marquee behavior="scroll" bgcolor="yellowgreen" direction="right" scrollamount="6">Use masks and sanitizers. Maintain social distancing.</marquee>
+    <div class="row">
+        <div class="column">
+            <img src="c5.jpg" alt="Snow" style="width:100%">
+        </div>
+        <div class="column">
+            <img src="c7.jpg" alt="Forest" style="width:100%" height="96%">
+        </div>
+        <div class="column">
+            <img src="c6.jpg" alt="Forest" style="width:100%">
+        </div>
+
+        <div class="column">
+            <img src="c8.jpg" alt="Forest" style="width:100%">
+        </div>
+
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <h1 class="title">COVID-19 Tracker</h1>
+    <marquee behavior="alternate" direction="left" scrollamount="7">Get your live updates here !!</marquee>
+    <marquee behavior="alternate" direction="right" scrollamount="7">Stay Home Stay Safe</marquee>
+    <div class="data-container">
+        <div class="location-container">
+            <h4>Country</h4>
+            <h1 id="country">India</h1>
+            <h4>Population</h4>
+            <h1 id="population"></h1>
+            <h4>Last Updated</h4>
+            <h1 id="update"></h1>
+        </div>
+
+        <div class="stats-container">
+            <h4>Cases</h4>
+            <h1 id="cases"></h1>
+            <h4>Deaths</h4>
+            <h1 id="deaths"></h1>
+            <h4>% of Deaths</h4>
+            <h1 id="percent"></h1>
+        </div>
+    </div>
+
+    <div style="clear: both;"></div>
+
+    <h1 class="title" id="about">About</h1>
+    <div class="about">
+        <p>This is a project on Covid-19 . It basically a COVID-19 Tracker , which will give you the details of total
+            cases in our country.The details will be updated after every 12 hours.The details include total population
+            of country,total corona positive cases,total deaths and percentage of deaths. <br> India is approaching the
+            ninth month of the coronavirus pandemic with more than five million confirmed cases - the second-highest in
+            the world <br> after the US - and more than 80,000 reported deaths. Seven states are worst affected -
+            accounting for about 48% of India's population. <br><br> Scientists and Doctors are working on vaccine. Till
+            the time you don't get vaccine, we have to take care of ourselves and our family. All we can do follow the
+            guidelines provided by WHO. By maintaining social distancing, using masks, washing hands time to time, using
+            sanitizers .</p>
+    </div>
+
+
+    <h1 class="title" id="contact">Contact us</h1>
+    <h2 class="subtitle">We are there to help you.</h2>
+
+    <!-- <div id="map"></div> -->
+    <div class="row1">
+        <div class="column1">
+            <div id="map"></div>
+        </div>
+        <div class="column1">
+            <div class="contact-form">
+                <form id="my-form" method="post" action="https://formspree.io/f/mknprzjp">
+                    <div class="fields">
+                        <div class="field name">
+                            <input name="name" class="form-control" type="text" placeholder="Name" required>
+                        </div>
+                        <div class="field email">
+                            <input name="email" class="form-control" type="email" placeholder="Email" required>
+                        </div>
+                        <div class="field subject">
+                            <input name="subject" class="form-control" type="text" placeholder="Subject" required>
+                        </div>
+                        <div class="field textarea">
+                            <textarea name="message" class="form-control" cols="10" rows="5"
+                                placeholder="Type your message here .." required></textarea>
+                        </div>
+                        <div class="button">
+                            <button type="submit" class="form-control submit">Send message</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div id="status"></div>
+        </div>
+    </div>
+
+    <footer class="footer">Created by <a href="https://madaansahaab777.github.io/portfolio/"> Ashish Madan</a> |
+        Information provided by <a href="https://systems.jhu.edu/research/public-health/ncov/">Johns Hopkins
+            University</a>
+    </footer>
+
+</body>
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+</body>
+
+</html>
