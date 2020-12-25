@@ -154,7 +154,7 @@ footer a{
 	div{
 		padding: 10px;
 	}
-	.stats-container{
+	.stats-container,.location-container{
 		display: block;
 		width: 100%;
 	}
