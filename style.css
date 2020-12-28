@@ -51,6 +51,15 @@ a:hover{
 	display: table;
 	padding: 20px;
   }
+ .symptom{
+	 color: rgba(253, 108, 11, 0.89);
+	 font-size: 21px;
+}
+
+.symptom1{
+	color: rgba(98, 173, 0, 0.829);
+	font-size: 21px;
+}
 
 
 .container1{
@@ -60,6 +69,12 @@ a:hover{
 	float: right;
 }
 
+.container4 img{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 50%;
+}
 .title {
 	background: linear-gradient(to right, #feb47b, #ff7e5f);
 	padding: 20px;
@@ -107,6 +122,15 @@ h4 {
 	width: 50%;
 }
 
+.row2 {
+	text-align: center;
+	padding: 20px;
+  }
+
+.para{
+	text-align: center;
+	margin: 5% 15%; 
+}
 #map{
 	/* float: left; */
 	width: 100%;
@@ -126,6 +150,14 @@ h4 {
 	clear: both;
 	display: table;
   }
+
+.social img{
+
+	width: 45px;
+	height: 45px;
+	border-radius: 50%;
+}
+
 footer {
 	font-family: 'Lobster',cursive;
 	bottom: 0;
@@ -146,6 +178,33 @@ footer a{
 	text-decoration: none;
 }
 
+html{
+	scroll-behavior: smooth;
+}
+
+.arrow-btn{
+	position: fixed;
+	bottom: 20px;
+	right: 20px;
+	z-index: 9;
+}
+
+.arrow-btn a{
+	height: 39px;
+	width: 37px;
+	text-align: center;
+	background: #1b1b1b;
+	display: block;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.arrow-btn a span{
+	color: #f2f2f2;
+	line-height: 39px;
+	font-size: 20px;
+}
+
 @media only screen and (max-width: 768px) {
 	/* For mobile phones: */
 	[class*="column1"] {
@@ -163,12 +222,15 @@ footer a{
 		width: 100%;
 	}
 	.container1{
-		width: auto;
-	}
-.container2{
-		display: block;
 		width: 50%;
-		justify-content: center;
-		margin-top: 0;
 	}
+	
+	.container2{
+		width: 46%;
+	}
+	.container4 img{
+		display: block;
+		width: 70%;
+	}
+
   }
